@@ -6,7 +6,7 @@
 #    By: gpinilla <gpinilla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 17:32:25 by gpinilla          #+#    #+#              #
-#    Updated: 2024/10/14 17:33:22 by gpinilla         ###   ########.fr        #
+#    Updated: 2024/10/14 18:32:18 by gpinilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ DARK_YELLOW =	\033[38;5;143m
 ### COMMANDS
 ################################################################################
 
-NAME            = Harl2.0
+NAME            = FixedPointNumber
 CC              = c++
 FLAGS           = -g -Wall -Werror -Wextra -std=c++98
 RM              = rm -rf
