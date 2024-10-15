@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FixedPointNumber.hpp                               :+:      :+:    :+:   */
+/*   Fixed.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpinilla <gpinilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,35 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXEDPOINTNUMBER_HPP
-#define FIXEDPOINTNUMBER_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
  #include <cmath>
  #include <iostream>
 
-class FixedPointNumber {
+class Fixed {
 private:
     int _fixedPointValue;                        // Almacena el valor del número de punto fijo
     static const int _fractionalBits = 8;        // Número de bits fraccionarios (constante, siempre 8)
 
 public:
     // Constructor por defecto que inicializa el valor a 0
-    FixedPointNumber();
+    Fixed();
 
     // Constructor de copia
-    FixedPointNumber(const FixedPointNumber &other);
+    Fixed(const Fixed &other);
 
     // Constructor con entero
-    FixedPointNumber(const int num);
+    Fixed(const int num);
 
     // Constructor con float
-    FixedPointNumber(const float num);
+    Fixed(const float num);
     
     // Destructor
-    ~FixedPointNumber();
+    ~Fixed();
 
     // Sobrecarga del operador de asignación
-    FixedPointNumber& operator=(const FixedPointNumber &other);
+    Fixed& operator=(const Fixed &other);
 
     // Devuelve el valor crudo almacenado
     int getRawBits() const;
@@ -50,6 +50,6 @@ public:
     int toInt(void) const;
 };
 
-std::ostream& operator<<(std::ostream& os, const FixedPointNumber& fp);
+std::ostream& operator<<(std::ostream& os, const Fixed& fp);
 
 #endif // FIXED_HPP

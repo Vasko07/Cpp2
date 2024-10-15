@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FixedPointNumber.cpp                               :+:      :+:    :+:   */
+/*   Fixed.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpinilla <gpinilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FixedPointNumber.hpp"
+#include "Fixed.hpp"
 #include <iostream>
 
 // Constructor por defecto
-FixedPointNumber::FixedPointNumber() : _fixedPointValue(0) {
+Fixed::Fixed() : _fixedPointValue(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
 // Constructor de copia
-FixedPointNumber::FixedPointNumber(const FixedPointNumber &other) {
+Fixed::Fixed(const Fixed &other) {
     std::cout << "Copy constructor called" << std::endl;
     *this = other;  // Usa el operador de asignación para copiar
 }
 
 // Sobrecarga del operador de asignación
-FixedPointNumber& FixedPointNumber::operator=(const FixedPointNumber &other) {
+Fixed& Fixed::operator=(const Fixed &other) {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other) {  // Evitar autoasignación
         this->_fixedPointValue = other.getRawBits();
@@ -34,18 +34,18 @@ FixedPointNumber& FixedPointNumber::operator=(const FixedPointNumber &other) {
 }
 
 // Destructor
-FixedPointNumber::~FixedPointNumber() {
+Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
 }
 
 // Devuelve el valor crudo almacenado en _fixedPointValue
-int FixedPointNumber::getRawBits() const {
+int Fixed::getRawBits() const {
     std::cout << "getRawBits member function called" << std::endl;
     return this->_fixedPointValue;
 }
 
 // Establece el valor crudo almacenado en _fixedPointValue
-void FixedPointNumber::setRawBits(int const raw) {
+void Fixed::setRawBits(int const raw) {
     std::cout << "setRawBits member function called" << std::endl;
     this->_fixedPointValue = raw;
 }

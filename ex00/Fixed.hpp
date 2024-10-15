@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FixedPointNumber.hpp                               :+:      :+:    :+:   */
+/*   Fixed.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpinilla <gpinilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,26 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXEDPOINTNUMBER_HPP
-#define FIXEDPOINTNUMBER_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-class FixedPointNumber {
+class Fixed {
 private:
     int _fixedPointValue;                        // Almacena el valor del número de punto fijo
     static const int _fractionalBits = 8;        // Número de bits fraccionarios (constante, siempre 8)
 
 public:
     // Constructor por defecto que inicializa el valor a 0
-    FixedPointNumber();
+    Fixed();
 
     // Constructor de copia
-    FixedPointNumber(const FixedPointNumber &other);
+    Fixed(const Fixed &other);
 
     // Sobrecarga del operador de asignación
-    FixedPointNumber& operator=(const FixedPointNumber &other);
+    Fixed& operator=(const Fixed &other);
 
     // Destructor
-    ~FixedPointNumber();
+    ~Fixed();
 
     // Devuelve el valor crudo almacenado
     int getRawBits() const;

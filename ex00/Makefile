@@ -6,7 +6,7 @@
 #    By: gpinilla <gpinilla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 17:32:25 by gpinilla          #+#    #+#              #
-#    Updated: 2024/10/14 18:32:18 by gpinilla         ###   ########.fr        #
+#    Updated: 2024/10/15 18:02:12 by gpinilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,13 +42,13 @@ DARK_YELLOW =	\033[38;5;143m
 ### COMMANDS
 ################################################################################
 
-NAME            = FixedPointNumber
+NAME            = Fixed
 CC              = c++
 FLAGS           = -g -Wall -Werror -Wextra -std=c++98
 RM              = rm -rf
 
-HEADERS			= FixedPointNumber.hpp
-SRC             = FixedPointNumber.cpp  main.cpp
+HEADERS			= Fixed.hpp
+SRC             = Fixed.cpp  main.cpp
 DIR_OBJ         = temp/
 OBJ             = $(SRC:src/%.c=$(DIR_OBJ)%.o)
 
